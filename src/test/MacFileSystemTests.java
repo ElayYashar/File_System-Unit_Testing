@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.HashMap;
 import org.junit.Test;
 
-// TODO: need to add test to read and write
-
 public class MacFileSystemTests 
 {
     HashMap<String, String> fileSystem;
