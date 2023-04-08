@@ -1,18 +1,41 @@
-## Getting Started
+This is a Java exercise that aims to mimic the permissions Operating Systems give to files on their file systems.
+Every file system is being Unit Tested in the /src/test directory.
+The file system holds 3 Operating systems:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Windows
 
-## Folder Structure
+* Can write only if its not on C:\.  
+C:\test.txt -> Bad  
+C:\Some Folder\test.txt -> Good  
 
-The workspace contains two folders by default, where:
+* Can delete only if its not on C:\.  
+C:\test.txt -> Bad  
+C:\Some Folder\test.txt -> Good   
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+* Can read any file.  
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+* Can check if any file exists.  
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Linux  
 
-## Dependency Management
+* Can write to any folder.  
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+* Can delete any file.  
+
+* Can read any file.  
+
+* Can check if any file exists.  
+
+## Mac  
+
+* Can write only to /usr/desktop/.  
+/usr/text.txt -> Bad  
+/usr/desktop/text.txt -> Good  
+
+* Can't delete any  
+
+* Can only read files on /usr/desktop.  
+/usr/text.txt -> Bad  
+/usr/desktop/text.txt -> Good  
+
+* Can check if any file exists.  
